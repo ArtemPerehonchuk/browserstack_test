@@ -1,20 +1,20 @@
 exports.config = {
-    user: process.env.BROWSERSTACK_USERNAME || 'BROWSERSTACK_USERNAME',
-    key: process.env.BROWSERSTACK_ACCESS_KEY || 'BROWSERSTACK_ACCESS_KEY',
+    user: process.env.BROWSERSTACK_USERNAME || 'bsuser_vBCR3p',
+    key: process.env.BROWSERSTACK_ACCESS_KEY || 'zCeKwstezez9xywupp74',
   
     updateJob: false,
     specs: [
-      './e2e/specs/**.specs.js'
+      './test/specs/**.js'
     ],
     exclude: [],
   
     capabilities: [{
-      project: "First Webdriverio Android Project",
-      build: 'Webdriverio Android',
-      name: 'first_test',
+      project: "Webdriverio Browserstack Android Project",
+      build: 'Webdriverio Pixel',
+      name: 'browserstack-tests',
       device: 'Google Pixel 3',
       os_version: "9.0",
-      app: process.env.BROWSERSTACK_APP_ID || 'bs://<hashed app-id>',
+      app: process.env.BROWSERSTACK_APP_ID || 'bs://829619f067f2c725ddd9727664f3d8bfac0cccc7',
       'browserstack.debug': true
     }],
   
@@ -29,6 +29,6 @@ exports.config = {
     framework: 'mocha',
     mochaOpts: {
       ui: 'bdd',
-      timeout: 20000
+      timeout: 60000
     }
   };
