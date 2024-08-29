@@ -7,10 +7,10 @@
     "@wdio/spec-reporter": "^8.1.0"
   },
   "scripts": {
-    "test:all:pixel": "wdio run ./wdio.android.conf.js",
-    "test:all:xiaomi": "wdio run ./wdio.ios.conf.js",
-    "test:signup": "wdio run ./wdio.android.conf.js --spec ./test/specs/test.signup.js",
-    "test:login": "wdio run ./wdio.android.conf.js --spec ./test/specs/test.login.js",
-    "test:swipe": "wdio run ./wdio.android.conf.js --spec ./test/specs/test.swipe.js"
+    "test:all:pixel": "wdio run ./wdio.pixel.conf.js",
+    "test:all:xiaomi": "wdio run ./wdio.xiaomi.conf.js",
+    "test:signup": "wdio run ./wdio.pixel.conf.js --spec ./test/specs/test.signup.js",
+    "test:login": "wdio run ./wdio.pixel.conf.js --spec ./test/specs/test.login.js",
+    "test:swipe": "wdio run ./wdio.pixel.conf.js --spec ./test/specs/test.swipe.js"
   }
 }

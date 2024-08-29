@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '16' # або інша версія Node.js
+          node-version: '18' # або інша версія Node.js
 
       - name: Install dependencies
         run: npm install
