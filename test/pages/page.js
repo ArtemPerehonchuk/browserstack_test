@@ -8,10 +8,6 @@ class Page {
         await element.setValue(value);
     }
 
-    // async clearInput(element) {
-    //     await element.clearValue();
-    // }
-
     async checkElementIsDisplayed(element) {
         await expect(element).toBeDisplayed();
     }
