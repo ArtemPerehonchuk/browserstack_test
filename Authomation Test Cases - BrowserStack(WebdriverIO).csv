@@ -1,0 +1,58 @@
+ID,Priority,Author,Date
+1,,Artem Perehonchuk,16.09.24
+Summary,Check login form with invalid password,,
+Pre-conditions,1. The Android-NativeDemoApp-0.4.0 app is run.,,
+Steps,Action,Expected result,Test result
+1.,"Tap on the ""Login"" tab.",Login / Sign Up form is displayed.,Not run
+2.,"Enter any valid email in the ""Email"" input field.",Entered email is displayed in the 'Email' input field.,
+3.,"Enter 7 characters password in the ""Password"" input field.",Entered password is displayed in the 'Password' input field as dots.,
+4.,"Tap on the ""Login"" button.","""Please enter at least 8 characters"" error message is displayed under the ""Password"" input.",
+Post conditions,,,
+Comments,,,
+,,,
+ID,Priority,Author,Date
+2,,Artem Perehonchuk,16.09.24
+Summary,Check login form with valid credentials,,
+Pre-conditions,1. The Android-NativeDemoApp-0.4.0 app is run.,,
+Steps,Action,Expected result,Test result
+1.,"Tap on the ""Login"" tab.",Login / Sign Up form is displayed.,Not run
+2.,"Enter any valid email in the ""Email"" input field.",Entered email is displayed in the 'Email' input field.,
+3.,"Enter any 8 characters password in the ""Password"" input field.",Entered password is displayed in the 'Password' input field as dots.,
+4.,"Tap on the ""Login"" button.","""Success! You are logged in"" message is displayed.",
+Post conditions,,,
+Comments,,,
+ID,Priority,Author,Date
+3,,Artem Perehonchuk,16.09.24
+Summary,Check sign up form with invalid email,,
+Pre-conditions,1. The Android-NativeDemoApp-0.4.0 app is run.,,
+Steps,Action,Expected result,Test result
+1.,"Tap on the ""Login"" tab.",Login / Sign Up form is displayed.,Not run
+2.,"Tap on the ""Sign up"" tab.",Sign Up form is displayed.,
+3.,"Enter any incorrect email in the ""Email"" input field.",Entered email is displayed in the 'Email' input field.,
+4.,"Enter any 8 characters password in the ""Password"" input field.",Entered password is displayed in the 'Password' input field as dots.,
+5. ,"Confirm password in the ""Confirm Password"" input field.",Entered password is displayed in the 'Confirm Password' input field as dots.,
+4.,"Tap on the ""Sign up"" button.","""Please enter a valid email address"" error message is displayed under the ""Email"" input.",
+Post conditions,,,
+Comments,,,
+ID,Priority,Author,Date
+4,,Artem Perehonchuk,16.09.24
+Summary,Check sign up form valid credentials,,
+Pre-conditions,1. The Android-NativeDemoApp-0.4.0 app is run.,,
+Steps,Action,Expected result,Test result
+1.,"Tap on the ""Login"" tab.",Login / Sign Up form is displayed.,Not run
+2.,"Tap on the ""Sign up"" tab.",Sign Up form is displayed.,
+3.,"Enter any correct email in the ""Email"" input field.",Entered email is displayed in the 'Email' input field.,
+4.,"Enter any 8 characters password in the ""Password"" input field.",Entered password is displayed in the 'Password' input field as dots.,
+5. ,"Confirm password in the ""Confirm Password"" input field.",Entered password is displayed in the 'Confirm Password' input field as dots.,
+4.,"Tap on the ""Sign up"" button.","""Signed Up!"" message is displayed.",
+Post conditions,,,
+Comments,,,
+ID,Priority,Author,Date
+5,,Artem Perehonchuk,16.09.24
+Summary,Check sign up form valid credentials,,
+Pre-conditions,1. The Android-NativeDemoApp-0.4.0 app is run.,,
+Steps,Action,Expected result,Test result
+1.,"Tap on the ""Swipe"" tab.",Swipe screen is displayed.,Not run
+2.,Swipe right to the Compatible section.,Compatible section is displayed.,
+Post conditions,,,
+Comments,,,

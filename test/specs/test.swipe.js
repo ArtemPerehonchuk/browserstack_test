@@ -6,10 +6,10 @@ const swipeScreen = new SwipeScreen();
 
 describe('Test swipe screen', () => {
     it('Should swipe to element, click on it and check URL', async () => {
-        await homeScreen.tapOnElement(homeScreen.swipeTab);
+        await homeScreen.tapOnSwipeTab();
         await swipeScreen.swipeToCompatibleElement();
-        await swipeScreen.tapOnElement(swipeScreen.compatibleItem);
-        await swipeScreen.checkElementIsDisplayed(swipeScreen.browserScreen);
-        await swipeScreen.checkTextInElemnt(swipeScreen.browserScreen, 'WebdriverIO');
+        await swipeScreen.tamOnCompatibleItem();
+        await swipeScreen.checkBrowserIsDisplayed;
+        await swipeScreen.checkTextInBrowser();
     })
 })

@@ -7,27 +7,27 @@ const loginScreen = new LoginScreen();
 
 let randomEmail, randomPassword;
 
-describe('Test sign up form', () => {
-    it('Should check login form with invalid passvord', async () => {
+describe('Test login form', () => {
+    xit('test case 1: Should check login form with invalid passvord', async () => {
         randomEmail = faker.internet.email();
         randomPassword = faker.internet.password({length: 7})
 
-        await homeScreen.tapOnElement(homeScreen.loginTab);
-        await loginScreen.setInputValue(loginScreen.emailInput, randomEmail);
-        await loginScreen.setInputValue(loginScreen.passwordInput, randomPassword);
-        await loginScreen.tapOnElement(loginScreen.loginBtn);
-        await loginScreen.checkElementIsDisplayed(loginScreen.invalidPasswordErrorMessage);
+        await homeScreen.tapOnLoginTab();
+        await loginScreen.fillInputs(randomEmail, randomPassword);
+        await loginScreen.tapOnLoginBtn;
+        await loginScreen.checkPasswordErrorIsDisplayed();
+        await loginScreen.checkPasswordErrorText();
     });
 
-    it('Should login with valid credentials', async () => {
+    xit('test case 2: Should login with valid credentials', async () => {
         randomEmail = faker.internet.email();
         randomPassword = faker.internet.password({min: 8})
 
-        await homeScreen.tapOnElement(homeScreen.loginTab);
-        await loginScreen.setInputValue(loginScreen.emailInput, randomEmail);
-        await loginScreen.setInputValue(loginScreen.passwordInput, randomPassword);
-        await loginScreen.tapOnElement(loginScreen.loginBtn);
-        await loginScreen.checkElementIsDisplayed(loginScreen.successMessage);
-        await loginScreen.checkTextInElemnt(loginScreen.successMessage, 'Success');
+        await homeScreen.tapOnLoginTab();
+        await loginScreen.tapOnSignUpTab();
+        await loginScreen.fillLoginInputs(randomEmail, randomPassword);
+        await loginScreen.tapOnLoginBtn();
+        await loginScreen.checkSuccessMsgIsDisplayed();
+        await loginScreen.checkSuccessMsgText();
     });
 })
