@@ -8,30 +8,27 @@ const loginScreen = new LoginScreen();
 let randomEmail, randomPassword, randomWord;
 
 describe('Test sign up form', () => {
-    it('Should check sign up form with invalid email', async () => {
+    it('test case 3: Should check sign up form with invalid email', async () => {
         randomWord = faker.word.noun();
         randomPassword = faker.internet.password({min: 8})
 
-        await homeScreen.tapOnElement(homeScreen.loginTab);
-        await loginScreen.tapOnElement(loginScreen.signUpTab);
-        await loginScreen.setInputValue(loginScreen.emailInput, randomWord);
-        await loginScreen.setInputValue(loginScreen.passwordInput, randomPassword);
-        await loginScreen.setInputValue(loginScreen.confirmInput, randomPassword);
-        await loginScreen.tapOnElement(loginScreen.signUpBtn);
-        await loginScreen.checkElementIsDisplayed(loginScreen.invalidEmailErrorMessage);
+        await homeScreen.tapOnLoginTab();
+        await loginScreen.tapOnSignUpTab();
+        await loginScreen.fillSignUpInputs(randomWord, randomPassword);
+        await loginScreen.tapOnSignUpBtn();
+        await loginScreen.checkEmailErrorIsDisplayed();
+        await loginScreen.checkEmailErrorText();
     });
 
     it('Should sign up with valid credentials', async () => {
         randomEmail = faker.internet.email();
         randomPassword = faker.internet.password({min: 8})
 
-        await homeScreen.tapOnElement(homeScreen.loginTab);
-        await loginScreen.tapOnElement(loginScreen.signUpTab);
-        await loginScreen.setInputValue(loginScreen.emailInput, randomEmail);
-        await loginScreen.setInputValue(loginScreen.passwordInput, randomPassword);
-        await loginScreen.setInputValue(loginScreen.confirmInput, randomPassword);
-        await loginScreen.tapOnElement(loginScreen.signUpBtn);
-        await loginScreen.checkElementIsDisplayed(loginScreen.successMessage);
-        await loginScreen.checkTextInElemnt(loginScreen.successMessage, 'Signed Up!');
+        await homeScreen.tapOnLoginTab();
+        await loginScreen.tapOnSignUpTab();
+        await loginScreen.fillSignUpInputs(randomEmail, randomPassword);
+        await loginScreen.tapOnSignUpBtn();
+        await loginScreen.checkSuccessSignUpMsgIsDisplayed();
+        await loginScreen.checkSuccessSignUpMsgText();
     });
 })

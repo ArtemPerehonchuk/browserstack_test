@@ -1,6 +1,4 @@
-const Page = require('./page.js');
-
-class SwipeScreen extends Page {
+class SwipeScreen {
     get compatibleItem () {return $('android=new UiSelector().text("COMPATIBLE")');}
     get browserScreen () {return $('//android.webkit.WebView[@text="Frameworks | WebdriverIO"]');}
 
@@ -27,6 +25,19 @@ class SwipeScreen extends Page {
 
             swipes++;
         }
+    }
+
+    async tamOnCompatibleItem() {
+        await this.compatibleItem.click();
+        await browser.pause(1000);
+    }
+
+    async checkBrowserIsDisplayed() {
+        await expect(this.browserScreen).toBeDisplayed();
+    }
+
+    async checkTextInBrowser() {
+        await expect(this.browserScreen).toHaveTextContaining('WebdriverIO');
     }
 }
 
